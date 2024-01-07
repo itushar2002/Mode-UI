@@ -1,95 +1,71 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+import React from 'react'
+import Announcement from '@/Components/Announcement'
+import Hero from '@/Components/Hero'
+import LogoCloud from '@/Components/LogoCloud'
+import Nav from '@/Components/Nav'
+import PageTwo from '@/Components/PageTwo'
+import PageThree from '@/Components/PageThree'
+import PageFour from '@/Components/PageFour'
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaDiscord } from "react-icons/fa";
+const page = () => {
+   return <>
+      <div id='main'>
+         <div id='page-one'>
+         <Announcement /> 
+          <Nav />
+          <Hero />
+         <LogoCloud />
+       </div>
+       <PageTwo />
+       <PageThree />
+       <PageFour />
+       <div id='footer-section'>
+         <div id='text'>
+         <h1>Mode UI</h1>
+         <p>Mode ui is a comprehensive design system that empowers
+           designers and developers to create cohesive and visually stunning
+           user interfaces accross various platforms and devices
+           </p>
+         </div>
+         <div className='about'>
+           <div className='lists'>
+           <ul id='ul1'>
+           <li>about us </li>
+           <li> pricing </li>
+           <li> contact us</li>
+           <li> features </li>
+        </ul>
+        <ul id='ul2'>
+           <li>figma design System</li>
+           <li>los kit</li>
+           <li> android kit</li>
+           <li> wire frame </li>
+         </ul>
+         <ul>
+           <li>Template </li>
+           <li> Landing page </li>
+           <li> Documentations</li>
+           <li>Comp library</li>
+         </ul>
+         <ul>
+           <li>privacy policy </li>
+           <li> disclaimer </li>
+           <li> Terms & Condition</li>
+           <li> affiliate program </li>
+        </ul>
+            </div>
+         <div className='Links'>
+           <FaGithub />
+           <FaLinkedin />
+           <FaDiscord />
+         </div>
+         </div>
         </div>
+    
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </>
 }
+
+export default page
